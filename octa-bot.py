@@ -141,6 +141,32 @@ async def supply(ctx):
   await ctx.send(result)
 
 
+@bot.command(
+  help="Uses this command for information of OCTA",
+  brief="Show Octa Information"
+)
+async def info(ctx):
+  if ctx.channel.id != int(CHANNEL_ID):
+    return
+
+  if ctx.author == bot.user:
+    return
+  await ctx.message.delete()
+  await ctx.send("Information about OCTA")
+
+
+@bot.command(
+  help="Uses this command for instruction of buying OCTA",
+  brief="Show how to buy OCTA"
+)
+async def howtobuy(ctx):
+  if ctx.channel.id != int(CHANNEL_ID):
+    return
+
+  if ctx.author == bot.user:
+    return
+  await ctx.message.delete()
+  await ctx.send("How to buy OCTA")
 
 
 bot.run(TOKEN)
