@@ -12,10 +12,6 @@ from discord.ext import commands
 from discord.ext.commands import bot
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
