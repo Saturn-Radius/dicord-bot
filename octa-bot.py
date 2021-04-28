@@ -193,7 +193,7 @@ def human_format(num):
     return '%.2f%s' % (num, ['', 'K', 'M', 'G', 'T', 'P'][magnitude])
 
 
-@tasks.loop(seconds=30)
+@tasks.loop(minutes=2)
 async def market_match():
   market_channel = bot.get_channel(int(MARKET_CHANNEL_ID))
 
