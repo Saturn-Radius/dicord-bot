@@ -206,8 +206,11 @@ async def market_match():
   #Volume
   driver.get(DEXGURU_URL + CONTRACT_ADDRESS + '?sort_by=id&sort_by2=address&asc=false&from_num=0&size=15')
   time.sleep(1)
-  volume = driver.find_element_by_xpath('/html/body/pre').get_attribute('innerText')
+  volume = driver.find_element_by_xpath('/html').get_attribute('innerText')
+  print(volume)
+  # volume = driver.find_element_by_xpath('/html/body/pre').get_attribute('innerText')
   volume_value = volume.split()
+  print(volume_value)
   volume_24h = json.loads(volume_value[0])["volume24hUSD"]
 
   # result_price = format(str_price, '.10f')
